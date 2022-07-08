@@ -3,8 +3,8 @@ import 'package:facebook_flutter/ui/components/app_bar_action.dart';
 import 'package:facebook_flutter/ui/home/controller/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'components/feed_card.dart';
 import 'components/stories_widget.dart';
-
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -112,14 +112,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: EdgeInsets.zero,
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
-                        itemCount: 10,
+                        itemCount: DataMock.posts.length,
                         itemBuilder: (context, index){
-                          return Container(
-                            margin: const EdgeInsets.only(top: 3, left: 5, right: 5),
-                            //padding: const EdgeInsets.all(8),
-                            width: constraints.maxWidth,
-                            height: 180,
-                            color: Colors.white,
+                          return  FeedCard(
+                            userImg: DataMock.posts[index].userImg,
+                            name: DataMock.posts[index].name,
+                            timeAgo: DataMock.posts[index].timeAgo,
+                            postTxt: DataMock.posts[index].postTxt,
+                            postImg: DataMock.posts[index].postImg,
                           );
                         }
                     )
@@ -129,6 +129,35 @@ class _HomeScreenState extends State<HomeScreen> {
             );
           },
         ),
+      ),
+
+
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        selectedFontSize: 11,
+        unselectedFontSize: 10,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Pagina Inicial"
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.storefront_outlined),
+              label: "Marktplace"
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle_outlined),
+              label: "Perfil"
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.notifications_outlined),
+              label: "Notificações"
+          ),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.menu),
+              label: "Menu"
+          )
+        ],
       ),
     );
   }

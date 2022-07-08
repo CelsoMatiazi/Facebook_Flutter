@@ -1,4 +1,5 @@
 
+import 'package:facebook_flutter/data/models/post_model.dart';
 import 'package:facebook_flutter/data/models/story_model.dart';
 
 class DataMock{
@@ -57,6 +58,45 @@ class DataMock{
         storyImg: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeFhLBCoBBDCEaLyH8C2iKjH1dDW7a2mOLcg&usqp=CAU",
         userName: "Allan Holdsworth"
     ),
+  ];
+
+
+  static List<PostModel> posts = [
+    PostModel(
+        name: "Celso Ricardi",
+        timeAgo: "1 h • ",
+        userImg: userImg,
+        postTxt: "App clone do Facebook, decidi implementar essa copia do facebook afim de exercitar o desenvolvimento de um layout bem elaborado com animações etc, esta sendo um grande desafio",
+        postImg: "https://blog-geek-midia.s3.amazonaws.com/wp-content/uploads/2020/11/06133829/flutter.png"
+    ),
+    PostModel(
+        name: "Steve Vai",
+        timeAgo: "5 h • ",
+        userImg: "https://studiosol-a.akamaihd.net/uploadfile/letras/fotos/9/1/f/4/91f4e4fc4e964909391ff77ca266f70a.jpg",
+        postTxt: "Check out images from my last show in Brazil",
+        postImg: "http://metalrevolution.net/blog/wp-content/uploads/2017/06/SteveVai-Imperator-AronyMartins-Junho2017-2-of-52.jpg"
+    ),
+    PostModel(
+        name: "Paco de Lucia",
+        timeAgo: "15 h • ",
+        userImg: "https://images.mubicdn.net/images/cast_member/9916/cache-195703-1485841701/image-w856.jpg?size=800x",
+        postTxt: "Paco de Lucia - Eterno",
+        postImg: "https://jornalggn.com.br/wp-content/uploads/imagens/paco_de_lucia_1.jpg"
+    ),
+    PostModel(
+        name: "Celso Ricardi",
+        timeAgo: "20 h • ",
+        userImg: userImg,
+        postTxt: "Alguem indica um bom restaurante japones?",
+    ),
+    PostModel(
+        name: "Miles Davis",
+        timeAgo: "20 h • ",
+        userImg: "http://screamyell.com.br/site/wp-content/uploads/2013/01/miles.jpg",
+        postTxt: "Jazz",
+        postImg: "https://p2.trrsf.com/image/fget/cf/1200/900/middle/images.terra.com/2022/04/28/1651353945-miles-davis-instagram.jpg"
+    ),
+
   ];
 
 }
