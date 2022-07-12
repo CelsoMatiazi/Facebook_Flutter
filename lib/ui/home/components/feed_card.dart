@@ -1,4 +1,4 @@
-import 'package:facebook_flutter/data/mock_data.dart';
+
 import 'package:flutter/material.dart';
 
 class FeedCard extends StatelessWidget {
@@ -98,8 +98,26 @@ class FeedCard extends StatelessWidget {
               child: Image.network(postImg!)
           ),
 
-          if(postImg != null)
-          const SizedBox(height: 10,),
+          // if(postImg == null)
+          // const SizedBox(height: 10,),
+
+
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            height: 30,
+            child: Row(
+              children: [
+                  Image.asset("assets/like.png", width: 20,),
+                  Image.asset("assets/love.png", width: 20,),
+                  Image.asset("assets/wow.png", width: 20,),
+                  const SizedBox(width: 3,),
+                  const Text("16"),
+                  const Spacer(),
+                  const Text("2 comentários")
+
+              ],
+            ),
+          ),
 
 
           const Divider(height: 5,),

@@ -74,6 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
               height: _staticHeight,
               width: constraints.maxWidth,
               child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
                 child: Column(
                   children: [
 
